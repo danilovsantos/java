@@ -27,8 +27,7 @@ public class FindPairWithTheGivenSum {
             }
 
         }
-
-        //System.out.println("");
+        
         System.out.println("iterations: "+count);
         System.out.println("resets: "+reset);
 
