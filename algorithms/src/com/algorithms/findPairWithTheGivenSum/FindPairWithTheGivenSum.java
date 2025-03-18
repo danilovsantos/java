@@ -9,6 +9,7 @@ public class FindPairWithTheGivenSum {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(numbers));
+        System.out.println("Target Sum: "+target);
         //findUsingBruteForce();
         findUsingSorting();
     }
@@ -26,7 +27,7 @@ public class FindPairWithTheGivenSum {
             count++;
 
             if((a+b) == target){
-                System.out.println(a+" + "+b+" = "+target);
+                System.out.println("Pair found: "+a+" + "+b+" = "+target);
             }
 
             if(x == numbers.length-2){
@@ -37,8 +38,8 @@ public class FindPairWithTheGivenSum {
 
         }
 
-        System.out.println("Iterations: "+count);
-        System.out.println("Reset Loops: "+reset);
+        System.out.println("Loop Iterations: "+count);
+        System.out.println("Loop Resets: "+reset);
     }
 
     public static void findUsingSorting(){
@@ -55,7 +56,7 @@ public class FindPairWithTheGivenSum {
             int b = numbers[right];
 
             if((a+b) == target){
-                System.out.println(a+" + "+b+" = "+target);
+                System.out.println("Pair Found: "+a+" + " +b+ " = "+target);
                 break;
             }else if((a+b) > target){
                 right--;
@@ -65,15 +66,13 @@ public class FindPairWithTheGivenSum {
             count++;
         }
 
-        System.out.println("Iterations: "+count);
+        System.out.println("Loop Iterations: "+count);
 
     }
 
     public static int[] sortNumbers(int[] numbers){
 
         for(int x = 0; x < numbers.length-1; x++) {
-
-            //{7, 2, 8, 1, 3, 5};
 
             int a = numbers[x];
             int b = numbers[x+1];
