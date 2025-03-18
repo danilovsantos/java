@@ -1,11 +1,14 @@
 package com.algorithms.findPairWithTheGivenSum;
 
+import java.util.Arrays;
+
 public class FindPairWithTheGivenSum {
 
     private static int target = 10;
     private static int[] numbers = new int[]{7, 2, 8, 1, 3, 5};
 
     public static void main(String[] args) {
+        System.out.println(Arrays.toString(numbers));
         //findUsingBruteForce();
         findUsingSorting();
     }
@@ -60,8 +63,9 @@ public class FindPairWithTheGivenSum {
                 left++;
             }
             count++;
-            System.out.println("Iterations: "+count);
         }
+
+        System.out.println("Iterations: "+count);
 
     }
 
