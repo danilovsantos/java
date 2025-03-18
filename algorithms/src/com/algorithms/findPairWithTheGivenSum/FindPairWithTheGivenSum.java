@@ -1,27 +1,25 @@
 package com.algorithms.findPairWithTheGivenSum;
 
-import java.util.Arrays;
-
 public class FindPairWithTheGivenSum {
 
     private static int target = 10;
     private static int[] numbers = new int[]{7, 2, 8, 1, 3, 5};
 
     public static void main(String[] args) {
-        findUsingBruteForce();
+        //findUsingBruteForce();
         findUsingSorting();
     }
 
     public static void findUsingBruteForce(){
 
-        var reset = 0;
-        var count = 0;
-        var y = 0;
+        int reset = 0;
+        int count = 0;
+        int y = 0;
 
         for(int x = 0; x < numbers.length-1; x++){
 
-            var a = numbers[y];
-            var b = numbers[x+1];
+            int a = numbers[y];
+            int b = numbers[x+1];
             count++;
 
             if((a+b) == target){
@@ -44,6 +42,7 @@ public class FindPairWithTheGivenSum {
 
         numbers = sortNumbers(numbers);
 
+        int count = 0;
         int left = 0;
         int right = numbers.length-1;
 
@@ -60,6 +59,8 @@ public class FindPairWithTheGivenSum {
             }else{
                 left++;
             }
+            count++;
+            System.out.println("Iterations: "+count);
         }
 
     }
